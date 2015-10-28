@@ -1,0 +1,30 @@
+<div id="wd-head1-container">
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p><%= link_to "Foody Social", root_path %></p>
+      </div -->
+      <div class="col-md-3">
+        <%= link_to "Foody Social", root_path, id: "logo" %>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-addon " id="basic-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+          <input type="text" class="form-control" placeholder="Search anything." aria-describedby="basic-addon1">
+          <span class="input-group-addon">Search</span>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="menu" >
+          <ul class="nav nav-pills pull-right">
+            <li ><a href="#" class="text-color">Home</a></li>
+            <li ><a href="#" class="text-color">FAQ</a></li>
+            <li ><a href="#" class="text-color">About us</a></li>
+            <li ><a href="#" class="text-color" role="button" data-toggle="modal" data-target="#login-modal">Log in</a</li>
+          </ul>
+        </div>
+      </div>
+      <%= render 'layouts/login' %>
+    </div>
+  </div>
+</div>

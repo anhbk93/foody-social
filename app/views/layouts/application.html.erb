@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= render 'layouts/shim' %>
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <%= render 'layouts/header1' %>
+  <div id="wd-wrapper">
+    <button type="button" class="hamburger is-closed sidebar-menu" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+        <span class="hamb-bottom"></span>
+            </button>
+    <%= render 'layouts/sidebar' %>
+    <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert text-center alert-#{message_type}") %>
+    <% end %>
+    <%= yield %>
+    <%= render 'shared/link_to_top' %>
+  </div>
+  <%= render 'layouts/footer' %>
+  <%= debug(params) if Rails.env.development? %>
+  <script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",27594]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
+</body>
+</html>
